@@ -1,7 +1,7 @@
 {
   "name": "minutrade-client-api",
   "version": "1.0.0",
-  "description": "Minutrade technical challenger: API to handle new clients registration",
+  "description": "Minutrade technical challenge: API to handle new clients registration",
   "main": "server.js",
   "directories": {
     "test": "tests"
