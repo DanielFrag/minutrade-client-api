@@ -14,7 +14,7 @@ function cpfAcc(cpfSubStr) {
 	return acc;
 }
 
-function formatCPF(cpf) {
+function formatCpf(cpf) {
 	if (typeof cpf != 'string') {
 		throw new Error('CPF must be a string')
 	}
@@ -30,13 +30,13 @@ function formatCPF(cpf) {
 	return cpfNumbers;
 }
 
-function validadeCPF(stringCPF) {
-	if (typeof stringCPF != 'string' && stringCPF.length != 11) {
+function validadeCpf(stringCpf) {
+	if (typeof stringCpf != 'string' || stringCpf.length != 11) {
 		throw new Error('Invalid cpf string')
 	}
-	return checkDigit(stringCPF.substring(0, 9), parseInt(stringCPF.charAt(9))) && checkDigit(stringCPF.substring(0, 10), parseInt(stringCPF.charAt(10)));
+	return checkDigit(stringCpf.substring(0, 9), parseInt(stringCpf.charAt(9))) && checkDigit(stringCpf.substring(0, 10), parseInt(stringCpf.charAt(10)));
 }
 
 module.exports = (cpf) => {
-	return validadeCPF(formatCPF(cpf));
+	return validadeCpf(formatCpf(cpf));
 }

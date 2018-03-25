@@ -1,7 +1,7 @@
 const chai = require('chai');
-const cpfChecker = require('../utils/cpfChecker');
+const cpfChecker = require('../../utils/cpf-checker');
 
-describe('Utils cpfChecker test', () => {
+describe('Utils "cpf-checker" test (interface)', () => {
 	it('Should test valid cpfs', () => {
 		const cpfs = ['347.496.221-33', '219.706.502-57', '675.255.777-22'];
 		const result = cpfs.reduce((t, c) => cpfChecker(c) && t, true);
