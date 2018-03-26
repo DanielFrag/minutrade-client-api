@@ -4,11 +4,16 @@ module.exports = {
 		if (typeof address != 'object') {
 			return false;
 		}
-		for (const sch in AddressSchema.obj) {
-			if (AddressSchema.obj[sch].schemaName.toLowerCase() != typeof address[sch]) {
+		for (let field in AddressSchema.obj) {
+			if (AddressSchema.obj[field].schemaName.toLowerCase() != typeof address[field]) {
 				return false;
 			}
 		}
 		return true;
+	},
+	checkUserData(user) {
+		if (!this.isValid(user.address)) {
+			throw new Error('Invalid marital status');
+		}
 	}
 };

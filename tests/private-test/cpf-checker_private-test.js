@@ -3,35 +3,6 @@ const rewire = require('rewire');
 const cpfChecker = rewire('../../utils/cpf-checker');
 
 describe('Utils cpfChecker test (private functions)', () => {
-	it('Should test the "formatCpf" with invalid input', () => {
-		const formatCpf = cpfChecker.__get__('formatCpf');
-		const invalid = {
-			nonString: 34561234,
-			big: '012345678910',
-			short: '',
-			repeated: '11111111111'
-		};
-		const keys = Object.keys(invalid);
-		keys.forEach(k => {
-			try {
-				formatCpf(invalid[k]);
-				throw new Error(`${k} not handled`);
-			} catch (e) {
-				chai.expect(e.message).not.be.equal(`${k} not handled`);
-			}
-		});
-	});
-	it('Should test the "formatCpf" with valid input', () => {
-		const formatCpf = cpfChecker.__get__('formatCpf');
-		const valid = {
-			incomplete: '55.365-22',
-			perfect: '347.496.221-33',
-			unformated: '21970650257'
-		};
-		const keys = Object.keys(valid);
-		const result = keys.reduce((t, c) => typeof formatCpf(c) == 'string' && t, true);
-		chai.expect(result).true;
-	});
 	it('Should test the "cpfAcc"', () => {
 		const cpfAcc = cpfChecker.__get__('cpfAcc');
 		const firstBlock = cpfAcc('111111111');

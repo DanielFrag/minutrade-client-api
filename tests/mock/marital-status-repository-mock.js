@@ -1,4 +1,4 @@
-const p = require('./promisefy');
+const p = require('./promisify');
 const customMaritalStatus = [];
 module.exports = {
 	async getAll() {

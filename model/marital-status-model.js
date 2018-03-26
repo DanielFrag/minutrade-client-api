@@ -4,6 +4,7 @@ mongoose.model('MaritalStatus', new Schema({
 	status: {
 		type: Schema.Types.String,
 		unique: true,
-		index: true
+		index: true,
+		required: true
 	}
 }));
