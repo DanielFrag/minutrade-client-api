@@ -39,4 +39,4 @@ function validadeCpf(stringCpf) {
 
 module.exports = (cpf) => {
 	return validadeCpf(formatCpf(cpf));
-}
+};
