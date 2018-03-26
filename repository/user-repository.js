@@ -10,5 +10,12 @@ module.exports = {
 				cpf: userCpf
 			})
 			.lean();
+	},
+	async updateUser(userId, params) {
+		return User
+			.findByIdAndUpdate(userId, params, {
+				new: true
+			})
+			.lean();
 	}
 };

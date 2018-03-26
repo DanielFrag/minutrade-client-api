@@ -6,7 +6,8 @@ chai.use(chaiHttp);
 const mongoose = require('mongoose');
 const cpfChecker = require('../../utils/cpf-checker');
 
-describe('Server black box test', () => {
+describe('Server black box test', function() {
+	this.timeout(10000);
 	let server;
 	const validBody = {
 		user: {
@@ -25,6 +26,26 @@ describe('Server black box test', () => {
 				"+55 (21) 1234-1234",
 				"+55 (21) 12345-1234",
 				"55 21 1234-1234"
+			]
+		}
+	};
+	const updateFields = {
+		user: {
+			_id: 'notchange',
+			address: {
+				complement: "bla",
+				country: "ble",
+				number: 15,
+				state: "foo",
+				street: "bar"
+			},
+			cpf: "347.496.221-33",
+			email: "newemail@email.com",
+			maritalStatus: "married",
+			name: "NAME",
+			phoneNumbers: [
+				"+55 (21) 1234-1234",
+				"+55 (21) 4321-3214"
 			]
 		}
 	};
@@ -94,6 +115,44 @@ describe('Server black box test', () => {
 					return done(err);
 				}
 				chai.expect(res).to.have.status(400);
+				done();
+			});
+	});
+	it('Should update the user', (done) => {
+		chai
+			.request(server)
+			.put('/api/user')
+			.send(updateFields)
+			.end((err, res) => {
+				if (err) {
+					return done(err);
+				}
+				chai.expect(res).to.have.status(204);
+				done();
+			});
+	});
+	it('Should find an updated user', (done) => {
+		chai
+			.request(server)
+			.get(`/api/user/${cpfChecker.formatCpf(updateFields.user.cpf)}`)
+			.end((err, res) => {
+				if (err) {
+					return done(err);
+				}
+				chai.expect(res).to.have.status(200);
+				chai.expect(res.body._id).not.be.equal(updateFields.user._id);
+				chai.expect(res.body.address.complement).to.be.equal(updateFields.user.address.complement);
+				chai.expect(res.body.address.country).to.be.equal(updateFields.user.address.country);
+				chai.expect(res.body.address.number).to.be.equal(updateFields.user.address.number);
+				chai.expect(res.body.address.state).to.be.equal(updateFields.user.address.state);
+				chai.expect(res.body.address.street).to.be.equal(updateFields.user.address.street);
+				chai.expect(res.body.email).to.be.equal(updateFields.user.email);
+				chai.expect(res.body.maritalStatus).to.be.equal(updateFields.user.maritalStatus);
+				chai.expect(res.body.maritalStatus).to.be.equal(updateFields.user.maritalStatus);
+				chai.expect(res.body.name).to.be.equal(updateFields.user.name);
+				res.body.phoneNumbers.forEach((phone, index) => {
+					chai.expect(phone).to.be.equal(updateFields.user.phoneNumbers[index]);
+				});
 				done();
 			});
 	});

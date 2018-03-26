@@ -1,53 +1,37 @@
 {
+	"variables": [],
 	"info": {
 		"name": "minutradeApi",
-		"_postman_id": "1a51547d-5912-ed0b-df96-25c757907bc1",
+		"_postman_id": "2232d6d9-8b72-b730-1cc9-0a1f22afc7e1",
 		"description": "",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "/api/user/:cpf",
 			"request": {
+				"url": "http://localhost:8080/api/user/00070000069",
 				"method": "GET",
 				"header": [],
-				"body": {},
-				"url": {
-					"raw": "http://localhost:8080/api/user/00070000069",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"user",
-						"00070000069"
-					]
+				"body": {
+					"mode": "raw",
+					"raw": ""
 				},
 				"description": ""
 			},
 			"response": [
 				{
-					"id": "37925afd-1895-4a25-97e9-abaca1404a2b",
+					"id": "832a7b39-5fa7-4e5d-b4b5-c9130dd8e44b",
 					"name": "/api/user/:cpf",
 					"originalRequest": {
+						"url": "http://localhost:8080/api/user/34749622133",
 						"method": "GET",
 						"header": [],
-						"body": {},
-						"url": {
-							"raw": "http://localhost:8080/api/user/34749622133",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"user",
-								"34749622133"
-							]
-						}
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
 					},
 					"status": "OK",
 					"code": 200,
@@ -114,25 +98,17 @@
 					"body": "{\"_id\":\"5ab88803c49d7d359e36ce72\",\"phoneNumbers\":[\"+55 (21) 1234-1234\",\"+55 (21) 12345-1234\",\"55 21 1234-1234\"],\"address\":{\"complement\":\"complement\",\"country\":\"contry\",\"number\":10,\"state\":\"state\",\"street\":\"street\"},\"cpf\":\"34749622133\",\"email\":\"email@example.com\",\"maritalStatus\":\"divorced\",\"name\":\"name\",\"__v\":0}"
 				},
 				{
-					"id": "a6cfb6ad-f4eb-4cfe-9a21-6f915be1aa76",
+					"id": "1dee5e5b-a475-4d30-a420-67abb81d5775",
 					"name": "/api/user/:cpf",
 					"originalRequest": {
+						"url": "http://localhost:8080/api/user/21970650257",
 						"method": "GET",
 						"header": [],
-						"body": {},
-						"url": {
-							"raw": "http://localhost:8080/api/user/21970650257",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"user",
-								"21970650257"
-							]
-						}
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
 					},
 					"status": "Not Found",
 					"code": 404,
@@ -199,25 +175,17 @@
 					"body": "User not found"
 				},
 				{
-					"id": "f9925037-cf75-4953-9260-14f9089a9caf",
+					"id": "288e49e0-ebb5-4246-b671-4ae01e2004be",
 					"name": "/api/user/:cpf",
 					"originalRequest": {
+						"url": "http://localhost:8080/api/user/00070000069",
 						"method": "GET",
 						"header": [],
-						"body": {},
-						"url": {
-							"raw": "http://localhost:8080/api/user/00070000069",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"user",
-								"00070000069"
-							]
-						}
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
 					},
 					"status": "OK",
 					"code": 200,
@@ -288,6 +256,7 @@
 		{
 			"name": "/api/user",
 			"request": {
+				"url": "http://localhost:8080/api/user",
 				"method": "POST",
 				"header": [
 					{
@@ -299,25 +268,14 @@
 					"mode": "raw",
 					"raw": "{\n\t\"user\": {\n\t\t\"address\": {\n\t\t\t\"complement\": \"complement\",\n\t\t\t\"country\": \"contry\",\n\t\t\t\"number\": 10,\n\t\t\t\"state\": \"state\",\n\t\t\t\"street\": \"street\"\n\t\t},\n\t\t\"cpf\": \"700.000-69\",\n\t\t\"email\": \"email2@example2.com\",\n\t\t\"maritalStatus\": \"married\",\n\t\t\"name\": \"name2\",\n\t\t\"phoneNumbers\": [\n\t\t\t\"+55 (21) 1234-1234\",\n\t\t\t\"+55 (21) 12345-1234\",\n\t\t\t\"55 21 1234-1234\"\n\t\t]\n\t}\n}"
 				},
-				"url": {
-					"raw": "http://localhost:8080/api/user",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"user"
-					]
-				},
 				"description": ""
 			},
 			"response": [
 				{
-					"id": "12740dad-c74b-47cc-a692-a39581a88679",
+					"id": "1c5b54bc-0daf-46a7-9576-22e98092fdbc",
 					"name": "/api/user",
 					"originalRequest": {
+						"url": "http://localhost:8080/api/user",
 						"method": "POST",
 						"header": [
 							{
@@ -330,18 +288,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"user\": {\n\t\t\"address\": {\n\t\t\t\"complement\": \"complement\",\n\t\t\t\"country\": \"contry\",\n\t\t\t\"number\": 10,\n\t\t\t\"state\": \"state\",\n\t\t\t\"street\": \"street\"\n\t\t},\n\t\t\"cpf\": \"347.496.221-33\",\n\t\t\"email\": \"email@example.com\",\n\t\t\"maritalStatus\": \"divorced\",\n\t\t\"name\": \"name\",\n\t\t\"phoneNumbers\": [\n\t\t\t\"+55 (21) 1234-1234\",\n\t\t\t\"+55 (21) 12345-1234\",\n\t\t\t\"55 21 1234-1234\"\n\t\t]\n\t}\n}"
 						},
-						"url": {
-							"raw": "http://localhost:8080/api/user",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"user"
-							]
-						}
+						"description": ""
 					},
 					"status": "Created",
 					"code": 201,
@@ -402,34 +349,23 @@
 					"body": ""
 				},
 				{
-					"id": "28fc95f2-12d2-414c-94f5-e22ffea75c7c",
+					"id": "f25e5678-d633-460c-a40c-eed8894ecc61",
 					"name": "/api/user",
 					"originalRequest": {
+						"url": "http://localhost:8080/api/user",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
 								"name": "Content-Type",
-								"value": "application/json",
-								"disabled": false
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n\t\"user\": {\n\t\t\"address\": {\n\t\t\t\"complement\": \"complement\",\n\t\t\t\"country\": \"contry\",\n\t\t\t\"number\": 10,\n\t\t\t\"state\": \"state\",\n\t\t\t\"street\": \"street\"\n\t\t},\n\t\t\"cpf\": \"700.000-69\",\n\t\t\"email\": \"email2@example2.com\",\n\t\t\"maritalStatus\": \"married\",\n\t\t\"name\": \"name2\",\n\t\t\"phoneNumbers\": [\n\t\t\t\"+55 (21) 1234-1234\",\n\t\t\t\"+55 (21) 12345-1234\",\n\t\t\t\"55 21 1234-1234\"\n\t\t]\n\t}\n}"
 						},
-						"url": {
-							"raw": "http://localhost:8080/api/user",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"user"
-							]
-						}
+						"description": ""
 					},
 					"status": "Created",
 					"code": 201,
@@ -490,34 +426,23 @@
 					"body": ""
 				},
 				{
-					"id": "848bfe6b-4414-4eb9-b393-6b03931e3bfb",
+					"id": "f911e588-fd79-4f61-be28-220e3e0ad1de",
 					"name": "/api/user",
 					"originalRequest": {
+						"url": "http://localhost:8080/api/user",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
 								"name": "Content-Type",
-								"value": "application/json",
-								"disabled": false
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n\t\"user\": {\n\t\t\"address\": {\n\t\t\t\"complement\": \"complement\",\n\t\t\t\"country\": \"contry\",\n\t\t\t\"number\": 10,\n\t\t\t\"state\": \"state\",\n\t\t\t\"street\": \"street\"\n\t\t},\n\t\t\"cpf\": \"700.000-64\",\n\t\t\"email\": \"email2@example2.com\",\n\t\t\"maritalStatus\": \"married\",\n\t\t\"name\": \"name2\",\n\t\t\"phoneNumbers\": [\n\t\t\t\"+55 (21) 1234-1234\",\n\t\t\t\"+55 (21) 12345-1234\",\n\t\t\t\"55 21 1234-1234\"\n\t\t]\n\t}\n}"
 						},
-						"url": {
-							"raw": "http://localhost:8080/api/user",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"user"
-							]
-						}
+						"description": ""
 					},
 					"status": "Bad Request",
 					"code": 400,
@@ -584,9 +509,10 @@
 					"body": "Invalid cpf"
 				},
 				{
-					"id": "08c35101-535b-42c8-9bd9-a3e35d961ab1",
+					"id": "22803d9e-841e-4923-9a52-49085822588c",
 					"name": "/api/user",
 					"originalRequest": {
+						"url": "http://localhost:8080/api/user",
 						"method": "POST",
 						"header": [
 							{
@@ -598,18 +524,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"user\": {\n\t\t\"address\": {\n\t\t\t\"complement\": \"complement\",\n\t\t\t\"country\": \"contry\",\n\t\t\t\"number\": 10,\n\t\t\t\"state\": \"state\",\n\t\t\t\"street\": \"street\"\n\t\t},\n\t\t\"cpf\": \"347.496.221-33\",\n\t\t\"email\": \"email2@example2.com\",\n\t\t\"maritalStatus\": \"married\",\n\t\t\"name\": \"name2\",\n\t\t\"phoneNumbers\": [\n\t\t\t\"+55 (21) 1234-1234\",\n\t\t\t\"+55 (21) 12345-1234\",\n\t\t\t\"55 21 1234-1234\"\n\t\t]\n\t}\n}"
 						},
-						"url": {
-							"raw": "http://localhost:8080/api/user",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"user"
-							]
-						}
+						"description": ""
 					},
 					"status": "Conflict",
 					"code": 409,
@@ -674,6 +589,92 @@
 					"cookie": [],
 					"responseTime": 68,
 					"body": "The user already exists"
+				}
+			]
+		},
+		{
+			"name": "/api/user",
+			"request": {
+				"url": "http://localhost:8080/api/user",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user\": {\n\t\t\"cpf\": \"700.000-69\",\n\t\t\"email\": \"newemail2@example2.com\",\n\t\t\"name\": \"NAME\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "23f6b950-4595-4f47-bb17-f637fe940e9a",
+					"name": "/api/user",
+					"originalRequest": {
+						"url": "http://localhost:8080/api/user",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user\": {\n\t\t\"cpf\": \"700.000-69\",\n\t\t\"email\": \"newemail2@example2.com\",\n\t\t\"name\": \"NAME\"\n\t}\n}"
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plainText",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-headers",
+							"key": "access-control-allow-headers",
+							"value": "Content-Type",
+							"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+						},
+						{
+							"name": "access-control-allow-methods",
+							"key": "access-control-allow-methods",
+							"value": "GET, POST, OPTIONS",
+							"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+						},
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Mon, 26 Mar 2018 23:10:04 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "Express",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 95,
+					"body": ""
 				}
 			]
 		}
