@@ -29,7 +29,7 @@
 			},
 			"response": [
 				{
-					"id": "e6772b20-6ea7-49c4-bdd1-288d1ca8c994",
+					"id": "37925afd-1895-4a25-97e9-abaca1404a2b",
 					"name": "/api/user/:cpf",
 					"originalRequest": {
 						"method": "GET",
@@ -114,7 +114,7 @@
 					"body": "{\"_id\":\"5ab88803c49d7d359e36ce72\",\"phoneNumbers\":[\"+55 (21) 1234-1234\",\"+55 (21) 12345-1234\",\"55 21 1234-1234\"],\"address\":{\"complement\":\"complement\",\"country\":\"contry\",\"number\":10,\"state\":\"state\",\"street\":\"street\"},\"cpf\":\"34749622133\",\"email\":\"email@example.com\",\"maritalStatus\":\"divorced\",\"name\":\"name\",\"__v\":0}"
 				},
 				{
-					"id": "d77b4f5f-3479-4b00-88de-2d642f977dd5",
+					"id": "a6cfb6ad-f4eb-4cfe-9a21-6f915be1aa76",
 					"name": "/api/user/:cpf",
 					"originalRequest": {
 						"method": "GET",
@@ -199,7 +199,7 @@
 					"body": "User not found"
 				},
 				{
-					"id": "20a8025c-5a00-4e35-99e3-2535de669c9d",
+					"id": "f9925037-cf75-4953-9260-14f9089a9caf",
 					"name": "/api/user/:cpf",
 					"originalRequest": {
 						"method": "GET",
@@ -315,7 +315,7 @@
 			},
 			"response": [
 				{
-					"id": "56bdd45a-93db-429e-a6a1-57769e167e1c",
+					"id": "12740dad-c74b-47cc-a692-a39581a88679",
 					"name": "/api/user",
 					"originalRequest": {
 						"method": "POST",
@@ -402,7 +402,7 @@
 					"body": ""
 				},
 				{
-					"id": "8e53866d-65af-404e-92b8-ae33669e5855",
+					"id": "28fc95f2-12d2-414c-94f5-e22ffea75c7c",
 					"name": "/api/user",
 					"originalRequest": {
 						"method": "POST",
@@ -490,7 +490,7 @@
 					"body": ""
 				},
 				{
-					"id": "1524fdfd-43c0-4093-8e00-e97573312e8b",
+					"id": "848bfe6b-4414-4eb9-b393-6b03931e3bfb",
 					"name": "/api/user",
 					"originalRequest": {
 						"method": "POST",
@@ -582,6 +582,98 @@
 					"cookie": [],
 					"responseTime": 56,
 					"body": "Invalid cpf"
+				},
+				{
+					"id": "08c35101-535b-42c8-9bd9-a3e35d961ab1",
+					"name": "/api/user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user\": {\n\t\t\"address\": {\n\t\t\t\"complement\": \"complement\",\n\t\t\t\"country\": \"contry\",\n\t\t\t\"number\": 10,\n\t\t\t\"state\": \"state\",\n\t\t\t\"street\": \"street\"\n\t\t},\n\t\t\"cpf\": \"347.496.221-33\",\n\t\t\"email\": \"email2@example2.com\",\n\t\t\"maritalStatus\": \"married\",\n\t\t\"name\": \"name2\",\n\t\t\"phoneNumbers\": [\n\t\t\t\"+55 (21) 1234-1234\",\n\t\t\t\"+55 (21) 12345-1234\",\n\t\t\t\"55 21 1234-1234\"\n\t\t]\n\t}\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"status": "Conflict",
+					"code": 409,
+					"_postman_previewlanguage": "html",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type",
+							"name": "Access-Control-Allow-Headers",
+							"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS",
+							"name": "Access-Control-Allow-Methods",
+							"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "23",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 26 Mar 2018 07:01:31 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"17-VwJiBEOxXbex2GUVnVNdhpRRSLg\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 68,
+					"body": "The user already exists"
 				}
 			]
 		}
