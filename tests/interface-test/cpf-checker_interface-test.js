@@ -3,7 +3,7 @@ const cpfChecker = require('../../utils/cpf-checker');
 
 describe('Utils "cpf-checker" test (interface)', () => {
 	it('Should test valid cpfs', () => {
-		const cpfs = ['347.496.221-33', '219.706.502-57', '675.255.777-22'];
+		const cpfs = ['347.496.221-33', '219.706.502-57', '675.255.777-22', '927.354.772-90'];
 		const result = cpfs.reduce((t, c) => cpfChecker.validate(c) && t, true);
 		chai.expect(result).true;
 	});

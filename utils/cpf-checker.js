@@ -1,7 +1,9 @@
 function checkDigit(cpfBlock, digit) {
-	let dResult = 11 - (cpfAcc(cpfBlock) % 11);
+	let dResult = cpfAcc(cpfBlock) % 11;
 	if (dResult < 2) {
 		dResult = 0;
+	} else {
+		dResult = 11 - dResult;
 	}
 	return dResult == digit;
 }
@@ -32,7 +34,7 @@ module.exports = {
 			throw new Error('Invalid number of digits')
 		} else if (len < 11) {
 			cpfNumbers = new Array(11 - cpfNumbers.length + 1).join('0') + cpfNumbers;
-		} else if (cpfNumbers.split('').reduce((t, c) => t == c ? c : false)) {
+		} else if (cpfNumbers.split('').reduce((t, c) => t === c ? c : false)) {
 			throw new Error('Digit repeat not allowed');
 		}
 		return cpfNumbers;
