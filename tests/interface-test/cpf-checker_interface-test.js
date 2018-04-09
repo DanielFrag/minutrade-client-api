@@ -8,7 +8,7 @@ describe('Utils "cpf-checker" test (interface)', () => {
 		chai.expect(result).true;
 	});
 	it('Should test invalid cpfs', () => {
-		const cpfs = ['347.496.221-03', '219.706.502-56', '975.255.777-22'];
+		const cpfs = ['347.496.221-03', '219.706.502-56', '975.255.777-22', '000.000.000-00'];
 		const result = cpfs.reduce((t, c) => {
 			try {
 				cpfChecker.validate(c);
